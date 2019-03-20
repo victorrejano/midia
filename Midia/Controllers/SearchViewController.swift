@@ -74,8 +74,11 @@ extension SearchViewController: UISearchBarDelegate {
             self?.collectionView.reloadData()
             self?.activityIndicator.isHidden = true
 
-        }) { (error) in
-            // TODO
+        }) { [weak self] (error) in
+            self?.activityIndicator.isHidden = true
+            let ac = UIAlertController(title: "Error", message: "No se ha podido obtener resultados", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self?.present(ac, animated: true)
         }
     }
 
