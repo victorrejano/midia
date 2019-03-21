@@ -6,11 +6,15 @@
 //  Copyright © 2019 Yuju. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class StorageManager {
 
     //static let shared: FavoritesProvidable = UserDefaultStorageManager(withMediaItemKind: .movie)
-    static let shared: FavoritesProvidable = CoreDataStorageManager(withMediaItemKind: .movie)
-
+    static var shared: FavoritesProvidable {
+      
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        return CoreDataStorageManager(withMediaItemKind: appDelegate.currentMediaItemKind)
+    }
 }

@@ -64,3 +64,8 @@ struct ITunesMoviesAPIConstants {
     
 }
 
+struct NotificationsType {
+    
+    static let mediaItemKindChanged = (name: "MEDIA_ITEM_KIND_CHANGED", key: "MEDIA_ITEM_KIND")
+}
+

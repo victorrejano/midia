@@ -19,7 +19,14 @@ class HomeViewController: UIViewController {
 
     let mediaItemCellIdentifier = "mediaItemCell"
 
-    var mediaItemProvider: MediaItemProvider!
+    var mediaItemProvider: MediaItemProvider! {
+        didSet {
+            // if view is loaded and mediaItemProvider is changed, reload data
+            if isViewLoaded {
+                loadData()
+            }
+        }
+    }
     private var mediaItems: [MediaItemProvidable] = []
 
     @IBOutlet weak var collectionView: UICollectionView!
@@ -59,13 +66,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        state = .loading
-        mediaItemProvider.getHomeMediaItems(onSuccess: { [weak self] (mediaItems) in
-            self?.mediaItems = mediaItems
-            self?.state = mediaItems.count > 0 ? .ready : .noResults
-        }) { [weak self] (error) in
-            self?.state = .failure
-        }
+        loadData()
     }
 
 }
@@ -100,4 +101,13 @@ extension HomeViewController: UICollectionViewDataSource {
         return cell
     }
 
+    private func loadData() {
+        state = .loading
+        mediaItemProvider.getHomeMediaItems(onSuccess: { [weak self] (mediaItems) in
+            self?.mediaItems = mediaItems
+            self?.state = mediaItems.count > 0 ? .ready : .noResults
+        }) { [weak self] (error) in
+            self?.state = .failure
+        }
+    }
 }

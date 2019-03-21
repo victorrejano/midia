@@ -67,6 +67,8 @@
 		57B5792A2244271B003F12D5 /* MovieManage+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B579292244271B003F12D5 /* MovieManage+Mapping.swift */; };
 		57B5792C2244297A003F12D5 /* BookFavoritesProvidable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B5792B2244297A003F12D5 /* BookFavoritesProvidable.swift */; };
 		57B5792E22442B9F003F12D5 /* MovieFavoritesProvidable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B5792D22442B9F003F12D5 /* MovieFavoritesProvidable.swift */; };
+		57B579302244326D003F12D5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B5792F2244326D003F12D5 /* SettingsViewController.swift */; };
+		57B5793222443A0F003F12D5 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57B5793122443A0F003F12D5 /* Launch Screen.storyboard */; };
 		8885450E031EA5A6B32EC089 /* Pods_MidiaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BBDDDA3F26F49357B6D5246 /* Pods_MidiaTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -133,6 +135,8 @@
 		57B579292244271B003F12D5 /* MovieManage+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MovieManage+Mapping.swift"; sourceTree = "<group>"; };
 		57B5792B2244297A003F12D5 /* BookFavoritesProvidable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookFavoritesProvidable.swift; sourceTree = "<group>"; };
 		57B5792D22442B9F003F12D5 /* MovieFavoritesProvidable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieFavoritesProvidable.swift; sourceTree = "<group>"; };
+		57B5792F2244326D003F12D5 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		57B5793122443A0F003F12D5 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		888542511EF44BFB37C8F8BB /* Pods-Midia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Midia.release.xcconfig"; path = "Pods/Target Support Files/Pods-Midia/Pods-Midia.release.xcconfig"; sourceTree = "<group>"; };
 		9FCABCE3A12FF5375955FEE4 /* Pods-MidiaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MidiaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MidiaTests/Pods-MidiaTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -265,6 +269,7 @@
 			children = (
 				1490EFE222248C5F00866151 /* Main.storyboard */,
 				1432C4AE222F1CB80032BAA3 /* Detail.storyboard */,
+				57B5793122443A0F003F12D5 /* Launch Screen.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -276,6 +281,7 @@
 				144E66392237122B005770BE /* FavoritesViewController.swift */,
 				1427A58F2225E04C000F2E59 /* HomeViewController.swift */,
 				1432C4AC222F0CDA0032BAA3 /* SearchViewController.swift */,
+				57B5792F2244326D003F12D5 /* SettingsViewController.swift */,
 				1427A5B12225FD9D000F2E59 /* Cells */,
 			);
 			path = Controllers;
@@ -429,6 +435,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57B5793222443A0F003F12D5 /* Launch Screen.storyboard in Resources */,
 				1490EFE922248C6000866151 /* LaunchScreen.storyboard in Resources */,
 				1432C4AB222F09C70032BAA3 /* placeholder.png in Resources */,
 				1490EFE622248C6000866151 /* Assets.xcassets in Resources */,
@@ -547,6 +554,7 @@
 				1490EFF52224914D00866151 /* Book.swift in Sources */,
 				57B5792A2244271B003F12D5 /* MovieManage+Mapping.swift in Sources */,
 				1432C4AD222F0CDA0032BAA3 /* SearchViewController.swift in Sources */,
+				57B579302244326D003F12D5 /* SettingsViewController.swift in Sources */,
 				148C6A832238571D00E4C844 /* CoreDataStorageManager.swift in Sources */,
 				14509F10222DE8AD00D49881 /* UIImageView+Networking.swift in Sources */,
 				1427A5B02225FCB7000F2E59 /* MediaItemCollectionViewCell.swift in Sources */,
@@ -738,7 +746,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3BD2Z379VB;
+				DEVELOPMENT_TEAM = 492CW4KB35;
 				INFOPLIST_FILE = Midia/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -757,7 +765,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3BD2Z379VB;
+				DEVELOPMENT_TEAM = 492CW4KB35;
 				INFOPLIST_FILE = Midia/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

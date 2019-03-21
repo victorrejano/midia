@@ -107,7 +107,6 @@ class DetailViewController: UIViewController {
     }
 
     // MARK: Actions
-
     @IBAction func didTapCloseButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
