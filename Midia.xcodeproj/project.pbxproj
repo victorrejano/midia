@@ -64,6 +64,9 @@
 		572869F82242F830006B7D11 /* ITunesMoviesAPIConsumerAlamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572869F42242F14D006B7D11 /* ITunesMoviesAPIConsumerAlamofire.swift */; };
 		57B5792722442164003F12D5 /* MovieCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572869EE2242C5E8006B7D11 /* MovieCollection.swift */; };
 		57B5792822442188003F12D5 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572869EC2242BBB2006B7D11 /* Movie.swift */; };
+		57B5792A2244271B003F12D5 /* MovieManage+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B579292244271B003F12D5 /* MovieManage+Mapping.swift */; };
+		57B5792C2244297A003F12D5 /* BookFavoritesProvidable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B5792B2244297A003F12D5 /* BookFavoritesProvidable.swift */; };
+		57B5792E22442B9F003F12D5 /* MovieFavoritesProvidable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B5792D22442B9F003F12D5 /* MovieFavoritesProvidable.swift */; };
 		8885450E031EA5A6B32EC089 /* Pods_MidiaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BBDDDA3F26F49357B6D5246 /* Pods_MidiaTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -127,6 +130,9 @@
 		572869F22242EE32006B7D11 /* MovieTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTests.swift; sourceTree = "<group>"; };
 		572869F42242F14D006B7D11 /* ITunesMoviesAPIConsumerAlamofire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITunesMoviesAPIConsumerAlamofire.swift; sourceTree = "<group>"; };
 		572869F62242F15D006B7D11 /* ITunesMoviesAPIConsumerNSURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITunesMoviesAPIConsumerNSURLSession.swift; sourceTree = "<group>"; };
+		57B579292244271B003F12D5 /* MovieManage+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MovieManage+Mapping.swift"; sourceTree = "<group>"; };
+		57B5792B2244297A003F12D5 /* BookFavoritesProvidable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookFavoritesProvidable.swift; sourceTree = "<group>"; };
+		57B5792D22442B9F003F12D5 /* MovieFavoritesProvidable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieFavoritesProvidable.swift; sourceTree = "<group>"; };
 		888542511EF44BFB37C8F8BB /* Pods-Midia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Midia.release.xcconfig"; path = "Pods/Target Support Files/Pods-Midia/Pods-Midia.release.xcconfig"; sourceTree = "<group>"; };
 		9FCABCE3A12FF5375955FEE4 /* Pods-MidiaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MidiaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MidiaTests/Pods-MidiaTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -195,7 +201,9 @@
 			isa = PBXGroup;
 			children = (
 				144E663C223715C3005770BE /* FavoritesProvidable.swift */,
+				57B5792B2244297A003F12D5 /* BookFavoritesProvidable.swift */,
 				148C6A822238571D00E4C844 /* CoreDataStorageManager.swift */,
+				57B5792D22442B9F003F12D5 /* MovieFavoritesProvidable.swift */,
 				144E664022371F7E005770BE /* StorageManager.swift */,
 				144E663E22371794005770BE /* UserDefaultStorageManager.swift */,
 				148C6A7C2238510700E4C844 /* Core Data */,
@@ -209,6 +217,7 @@
 				148C6A7D2238513000E4C844 /* Model.xcdatamodeld */,
 				148C6A802238550600E4C844 /* CoreDataStack.swift */,
 				148C6A84223863BA00E4C844 /* BookManage+Mapping.swift */,
+				57B579292244271B003F12D5 /* MovieManage+Mapping.swift */,
 			);
 			path = "Core Data";
 			sourceTree = "<group>";
@@ -516,6 +525,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				572869EF2242C5E8006B7D11 /* MovieCollection.swift in Sources */,
+				57B5792C2244297A003F12D5 /* BookFavoritesProvidable.swift in Sources */,
 				572869F72242F15D006B7D11 /* ITunesMoviesAPIConsumerNSURLSession.swift in Sources */,
 				144E663F22371794005770BE /* UserDefaultStorageManager.swift in Sources */,
 				1427A5902225E04C000F2E59 /* HomeViewController.swift in Sources */,
@@ -535,6 +545,7 @@
 				572869ED2242BBB2006B7D11 /* Movie.swift in Sources */,
 				14509F07222DD62100D49881 /* Constants.swift in Sources */,
 				1490EFF52224914D00866151 /* Book.swift in Sources */,
+				57B5792A2244271B003F12D5 /* MovieManage+Mapping.swift in Sources */,
 				1432C4AD222F0CDA0032BAA3 /* SearchViewController.swift in Sources */,
 				148C6A832238571D00E4C844 /* CoreDataStorageManager.swift in Sources */,
 				14509F10222DE8AD00D49881 /* UIImageView+Networking.swift in Sources */,
@@ -545,6 +556,7 @@
 				1427A5E12228787F000F2E59 /* Game.swift in Sources */,
 				144E663A2237122B005770BE /* FavoritesViewController.swift in Sources */,
 				1427A5E822287CDB000F2E59 /* MediaItemKind.swift in Sources */,
+				57B5792E22442B9F003F12D5 /* MovieFavoritesProvidable.swift in Sources */,
 				144E664122371F7E005770BE /* StorageManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
