@@ -10,7 +10,7 @@ import Foundation
 
 struct Movie {
     // MARK: Properties
-    let movieId: String
+    let movieId: Int
     let title: String
     let imageURL: URL?
     
@@ -20,7 +20,7 @@ struct Movie {
     let synopsis: String?
     
     // MARK: Initialization
-    init(movieId: String,
+    init(movieId: Int,
          title: String,
          imageURL: URL? = nil,
          artistName: String? = nil,
@@ -41,7 +41,7 @@ struct Movie {
 // MARK: Providable protocols
 extension Movie: MediaItemProvidable {
     var mediaItemId: String {
-        return movieId
+        return "\(movieId)"
     }
 }
 
@@ -103,8 +103,7 @@ extension Movie: Codable {
         
         let container = try decoder.container(keyedBy: CodingKeys.self)
         
-        let id = try container.decode(Int.self, forKey: .movieId)
-        movieId = "\(id)"
+        movieId = try container.decode(Int.self, forKey: .movieId)
         title = try container.decode(String.self, forKey: .title)
         imageURL = try container.decodeIfPresent(URL.self, forKey: .imageURL)
         

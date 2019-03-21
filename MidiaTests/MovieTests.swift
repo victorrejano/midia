@@ -12,10 +12,12 @@ import XCTest
 class MovieTests: XCTestCase {
     var movie: Movie!
     var decoder: JSONDecoder!
+    var encoder: JSONEncoder!
     
     override func setUp() {
-        movie = Movie(movieId: "1232", title: "V for Vendetta")
+        movie = Movie(movieId: 1232, title: "V for Vendetta")
         decoder = JSONDecoder()
+        encoder = JSONEncoder()
     }
     
     override func tearDown() {
@@ -43,4 +45,39 @@ class MovieTests: XCTestCase {
         }
     }
     
+    func testEncodeMovie() {
+        do {
+            let fullMovie = Movie(movieId: 123124312, title: "A random title", imageURL: URL(string: "https://www.google.com/"), artistName: "An artist, another artist", releaseDate: Date(), price: 9.95, synopsis: "A synopsis")
+            
+            let encodedMovie = try encoder.encode(fullMovie)
+            XCTAssertNotNil(encodedMovie)
+        
+        } catch {
+            assertionFailure("Encode movie fails")
+        }
+    }
+    
+    func testDecodeEncodedMovie() {
+        do {
+            let fullMovie = Movie(movieId: 123124312, title: "A random title", imageURL: URL(string: "https://www.google.com/"), artistName: "An artist, another artist", releaseDate: Date(), price: 9.95, synopsis: "A synopsis")
+            
+            let encodedMovie = try encoder.encode(fullMovie)
+            XCTAssertNotNil(encodedMovie)
+            
+            let decodedMovie = try decoder.decode(Movie.self, from: encodedMovie)
+            XCTAssertNotNil(decodedMovie)
+            
+            XCTAssertNotNil(decodedMovie.movieId)
+            XCTAssertNotNil(decodedMovie.title)
+            XCTAssertNotNil(decodedMovie.imageURL)
+            
+            XCTAssertNotNil(decodedMovie.artistName)
+            XCTAssertNotNil(decodedMovie.releaseDate)
+            XCTAssertNotNil(decodedMovie.price)
+            XCTAssertNotNil(decodedMovie.synopsis)
+            
+        } catch {
+            assertionFailure(error.localizedDescription)
+        }
+    }
 }

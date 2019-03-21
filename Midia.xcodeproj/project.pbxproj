@@ -62,6 +62,8 @@
 		572869F52242F14D006B7D11 /* ITunesMoviesAPIConsumerAlamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572869F42242F14D006B7D11 /* ITunesMoviesAPIConsumerAlamofire.swift */; };
 		572869F72242F15D006B7D11 /* ITunesMoviesAPIConsumerNSURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572869F62242F15D006B7D11 /* ITunesMoviesAPIConsumerNSURLSession.swift */; };
 		572869F82242F830006B7D11 /* ITunesMoviesAPIConsumerAlamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572869F42242F14D006B7D11 /* ITunesMoviesAPIConsumerAlamofire.swift */; };
+		57B5792722442164003F12D5 /* MovieCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572869EE2242C5E8006B7D11 /* MovieCollection.swift */; };
+		57B5792822442188003F12D5 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572869EC2242BBB2006B7D11 /* Movie.swift */; };
 		8885450E031EA5A6B32EC089 /* Pods_MidiaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BBDDDA3F26F49357B6D5246 /* Pods_MidiaTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -553,7 +555,9 @@
 			files = (
 				1427A5EC22287DDF000F2E59 /* MediaItemAPIConsumable.swift in Sources */,
 				1490F01A2224A15C00866151 /* Book.swift in Sources */,
+				57B5792822442188003F12D5 /* Movie.swift in Sources */,
 				572869F82242F830006B7D11 /* ITunesMoviesAPIConsumerAlamofire.swift in Sources */,
+				57B5792722442164003F12D5 /* MovieCollection.swift in Sources */,
 				1427A5E22228787F000F2E59 /* Game.swift in Sources */,
 				14509F0A222DE2A600D49881 /* GoogleBooksAPIConsumerAlamofire.swift in Sources */,
 				1427A5DF222873BD000F2E59 /* MediaItemProvidable.swift in Sources */,
