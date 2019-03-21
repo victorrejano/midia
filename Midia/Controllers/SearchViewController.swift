@@ -16,7 +16,15 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 
-    var mediaItemProvider: MediaItemProvider!
+    var mediaItemProvider: MediaItemProvider! {
+        didSet {
+            // if view is loaded and mediaItemProvider is changed, clear screen
+            if isViewLoaded {
+                mediaItems = []
+                collectionView.reloadData()
+            }
+        }
+    }
     var mediaItems: [MediaItemProvidable] = []
 
     override func viewDidLoad() {
