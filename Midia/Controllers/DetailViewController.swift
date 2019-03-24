@@ -93,7 +93,7 @@ class DetailViewController: UIViewController {
         }
 
         if let creationDate = mediaItem.creationDate {
-            creationDateLabel.text = DateFormatter.booksAPIDateFormatter.string(from: creationDate)
+            creationDateLabel.text = "Published on: \(DateFormatter.booksAPIDateFormatter.string(from: creationDate))" 
         } else {
             creationDateLabel.isHidden = true
         }
